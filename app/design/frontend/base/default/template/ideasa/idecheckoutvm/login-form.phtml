@@ -1,0 +1,60 @@
+<div id="idecheckoutvm-login-box" style="display: none;">
+  <div id="idecheckoutvm-login-message"></div>
+  <div class="front">
+    <div class="fields username">
+      <label for="login:username" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+      <div class="input-box">
+        <input type="text" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="login:username" class="input-text" title="<?php echo $this->__('Email Address') ?>" />
+      </div>
+    </div>
+    <div class="fields password">
+      <label for="login:password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+      <div class="input-box">
+        <input type="password" name="login[password]" class="input-text" id="login:password" title="<?php echo $this->__('Password') ?>" />
+      </div>
+    </div>
+    <div class="actions">
+      <a href="javascript:void(0);" id="idecheckoutvm-forgot-password" type="forgotten"><?php echo $this->__('Forgotten my password') ?></a>
+      <a href="javascript:void(0);" id="idecheckoutvm-button-login" title="<?php echo $this->__('Login') ?>"><?php echo $this->__('Login') ?></a>
+    </div>
+  </div>
+
+  <div class="back" style="display: none;">
+    <div class="fields username">
+      <label for="forgotpassword:username" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+      <div class="input-box">
+        <input type="text" name="forgotpassword[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="forgotpassword:username" class="input-text" title="<?php echo $this->__('Email Address') ?>" />
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="javascript:void(0);" id="idecheckoutvm-return-login"><?php echo $this->__('Return to login') ?></a>
+      <a href="javascript:void(0);" id="idecheckoutvm-button-forgotten" title="<?php echo $this->__('Reenviar senha') ?>"><?php echo $this->__('Reenviar senha') ?></a>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+  var ideCheckoutLoginInst = new IdeCheckoutvmLogin('ide-checkout-form', {
+    login: '<?php echo $this->getUrl('idecheckoutvm/login/index', array('_secure' => true)) ?>',
+    forgotpassword: '<?php echo $this->getUrl('idecheckoutvm/login/forgotpassword', array('_secure' => true)) ?>',
+    redirect: '<?php echo $this->getUrl('idecheckoutvm/index/index', array('_secure' => true)) ?>'
+  },
+  {loginLinkText: '<?php echo $this->__('Return to login') ?>',
+    forgottenLinkText: '<?php echo $this->__('Forgotten your password?') ?>'
+  });
+  $('idecheckoutvm-return-login').observe('click', function() {
+    ideCheckoutLoginInst.changeToLogin();
+  });
+  $('idecheckoutvm-forgot-password').observe('click', function() {
+    ideCheckoutLoginInst.changeToForgotPassword();
+  });
+  $('idecheckoutvm-button-login').observe('click', function() {
+    ideCheckoutLoginInst.doLogin();
+  });
+  $('idecheckoutvm-button-forgotten').observe('click', function() {
+    ideCheckoutLoginInst.resetPassword();
+  });
+//]]>
+</script>

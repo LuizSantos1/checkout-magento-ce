@@ -1,0 +1,20 @@
+<?php
+if (!Mage::helper('idecheckoutvm/checkout')->isShowLoginLink()) {
+    return;
+}
+?>
+<p class="idecheckoutvm-login-area">
+    <a id="idecheckoutvm-link-login">
+        <?php echo $this->__('Already registered CVM?') ?>
+    </a>
+</p>
+<?php echo $this->getChildHtml('customer.login.form') ?>
+
+<script type="text/javascript">
+//<![CDATA[
+    $('idecheckoutvm-link-login').observe('click', function () {
+        Effect.toggle('billing-new-address-form', 'appear');
+        Effect.toggle('idecheckoutvm-login-box', 'blind', {duration: 2.0});
+    });
+//]]>
+</script>

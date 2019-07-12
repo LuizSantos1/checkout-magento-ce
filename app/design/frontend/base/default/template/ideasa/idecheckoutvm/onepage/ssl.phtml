@@ -1,0 +1,13 @@
+<?php
+if (!$this->isShowSslImage()) {
+  return;
+}
+?>
+
+<ul class="ssl-block">
+  <?php if ($this->isShowSsl()): ?>
+    <li>
+      <a class="ssl" href="<?php echo ($this->getLinkSsl() != '' ? $this->getLinkSsl() : '#')?>" title="<?php echo $this->__('Você está em ambiente seguro'); ?>" <?php echo ($this->getLinkSsl() != '' ? 'target="_blank"' : '')?>></a>
+    </li>
+  <?php endif ?>
+</ul>

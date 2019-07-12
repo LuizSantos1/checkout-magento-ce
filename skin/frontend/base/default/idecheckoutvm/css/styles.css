@@ -1,0 +1,700 @@
+.idecheckoutvm-index-index .page-title, .category-title {
+  padding: 0;
+  text-align: center;
+}
+#ide-checkout-form .col3-set .col-1, .col3-set .col-2 {
+  float: left;
+  width: 32%;
+}
+#ide-checkout-form .col3-set .col-3 {
+  float: left;
+  width: 36%;
+}
+#ide-checkout-form .col3-set .col-1,
+#ide-checkout-form .col3-set .col-2,
+#ide-checkout-form .col3-set .col-3 {
+  border:0 solid #CCC
+}
+#ide-checkout-form .col3-set .col-2,
+#ide-checkout-form .col3-set .col-3{
+  border-left:0 none
+}
+
+#ide-checkout-form .col3-set .col-2,
+#ide-checkout-form .col3-set .col-3{
+  margin-left:0
+}
+
+#ide-checkout-form .col3-set .col-3{
+  float:left;
+  width:36%;
+}
+#ide-checkout-form .col-main div.step-title{
+  background-repeat:no-repeat;
+  font-size:16px;
+  height:35px;
+  padding-top:10px;
+  text-transform:uppercase
+}
+#checkout-step-coupon {padding-bottom: 20px;}
+#checkout-step-billing .step-title,
+#checkout-step-shipping .step-title,
+#checkout-step-coupon .step-title,
+#checkout-step-shipping-method .step-title,
+#checkout-step-payment-method .step-title,
+#checkout-review .step-title {
+  line-height: 30px;
+  padding:10px 10px 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+#checkout-step-billing .step-title .mask,
+#checkout-step-shipping .step-title .mask,
+#checkout-step-coupon .step-title .mask,
+#checkout-step-shipping-method .step-title .mask,
+#checkout-step-payment-method .step-title .mask,
+#checkout-review .step-title .mask {
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+}
+#checkout-step-shipping-method .step-title,
+#checkout-step-coupon .step-title,
+#checkout-step-payment-method .step-title,
+#checkout-review .step-title{
+  border-left:1px solid #fff;
+}
+
+#checkout-step-billing .step-body,
+#header-shipping,
+#checkout-step-shipping-method .step-body,
+#checkout-step-payment-method {
+  padding:0 10px;
+}
+
+#checkout-step-billing .form-list,
+#checkout-step-shipping .form-list,
+#checkout-shipping-method-load,
+#checkout-shipping-method-additional-load,
+#checkout-payment-method-load,
+#payment-tool-tip {
+  padding:10px 0;
+}
+#checkout-payment-method-load dt {
+  line-height: 2.5;
+}
+#checkout-payment-method-load dt img {
+  float: right;
+}
+#checkout-review-load, #checkout-review-submit {
+  padding: 10px 0 10px 10px;
+}
+
+#checkout-review-submit button.checkout {
+  border: 0 none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  padding: 5px 40px;
+  width: 100%;
+}
+
+#checkout-review-submit button.checkout.disable {
+  background:none repeat scroll 0 0 #ccc;
+}
+
+#checkout-review-submit div.loading{
+  font-style:italic;
+  margin-top:10px;
+  text-align:right;
+}
+
+#checkout-shipping-method-load .please-wait,
+#checkout-shipping-method-additional-load .please-wait,
+#checkout-payment-method-load .please-wait,
+#checkout-review-load .please-wait{
+  background:url(../images/loader.gif) no-repeat scroll 50% 50% transparent;
+  float:none;
+  min-height:80px;
+  border: 0;
+  display: block;
+}
+
+.col3-set .col-1 .same-as-billing{
+  padding:0 0 10px 10px;
+  clear: both;
+}
+
+#checkout-step-shipping{
+  padding: 0 10px;
+}
+
+.form-list .fields{
+  float:left;
+  width:49%;
+  margin: 0 0 10px 0;
+}
+
+.form-list .fields.email,
+.form-list .fields.street1,
+.form-list .fields.tipo_pessoa,
+.form-list .fields.region,
+.form-list .fields.country,
+.form-list .fields.address-select {
+  clear:both;
+  float:none;
+  width:100%;
+  display: inline-block;
+}
+.form-list .input-box {
+  width:100%
+}
+
+.form-list .tipo_pessoa div.F,
+.form-list .tipo_pessoa div.J {
+  width:49%;
+}
+.form-list .tipo_pessoa div.F {
+  float: left;
+}
+.form-list .tipo_pessoa label {
+  float: none;
+  margin-left: 5px;
+}
+
+.form-list .tipo_pessoa div.J {
+  float: right;
+}
+
+.form-list .customer-dob .dob-month,
+.form-list .customer-dob .dob-year{
+  clear:none
+}
+
+.form-list .fields.lastname,
+.form-list .fields.street3,
+.form-list .fields.city,
+.form-list .fields.country,
+.form-list .fields.fax,
+.form-list .fields.confirm_password,
+.form-list .fields.gender,
+.form-list .fields.telephone,
+.form-list .fields.nome_fantasia {
+  margin-left:5px
+}
+
+.form-list .fields.postcode {
+  clear:both;
+}
+
+.form-list .fields.mobile ul,
+.form-list .fields.telephone ul {
+  padding-top: 32px;
+}
+
+.form-list .fields.mobile ul label,
+.form-list .fields.telephone ul label {
+  float: none;
+  font-weight: normal;
+}
+
+.form-list .postcode-help{
+  padding:25px 0 0 5px
+}
+
+.form-list ul.register{
+  clear:both
+}
+.form-list ul.save-in-address-book label,
+.form-list ul.register label {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.form-list .fields.dob .dob-month,
+.form-list .fields.dob .dob-year{
+  margin-left:5px
+}
+
+.form-list .customer-dob .dob-day,
+.form-list .customer-dob .dob-month,
+.form-list .customer-dob .dob-year {
+  float: left;
+  width: 30%;
+}
+
+.form-list .fields.gender select{
+  width:100%
+}
+
+.form-list .save-in-address-book{
+  clear:both
+}
+
+.form-list #register-customer{
+  clear:both
+}
+.form-list .fields.street4, .form-list .fields.dob {clear: left;}
+
+#idecheckoutvm-login-box form input[type=text],
+#idecheckoutvm-login-box form input[type=password]{
+  border:1px solid #dbdeeb;
+  width:100%;
+  background:0;
+  height:30px;
+  line-height: 20px;
+  padding:0;
+  font-size:16px;
+  color:#5b6074;
+}
+#idecheckoutvm-login-box div.button {
+  margin-top: 5px;
+  float: left;
+  width: 50%;
+}
+#idecheckoutvm-button-login,
+#idecheckoutvm-button-forgotten,
+#idecheckoutvm-button-coupon,
+#idecheckoutvm-button-cancel-coupon {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
+  -ms-transition: .4s;
+  transition: .4s;
+  width: 45%;
+  border: 1px solid;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+}
+#idecheckoutvm-forgot-password,
+#idecheckoutvm-return-login {
+  text-decoration: underline;
+  border: 0;
+  border-radius: 0;
+  clear: both;
+  font-size: 0.91em;
+  padding: 10px 0;
+}
+#idecheckoutvm-forgot-password,
+#idecheckoutvm-return-login {
+  float: right;
+}
+#idecheckoutvm-button-coupon,
+#idecheckoutvm-button-cancel-coupon {
+  float: right;
+  width: 100%;
+}
+form label{
+  position:relative;
+  z-index:0
+}
+
+form label.required em{
+  float:right;
+  font-style:normal;
+  position:absolute;
+  right:-8px;
+  top:0
+}
+#idecheckoutvm-login-box .idecheckoutvm-link {
+  width:100%;
+  display:inline-block;
+  margin:0
+}
+#idecheckoutvm-login-message {
+  padding-top: 10px;
+}
+#idecheckoutvm-login-message .messages li li {
+  background: #faffa6;
+  padding: 5px;
+  text-align: justify;
+}
+
+#idecheckoutvm-coupon-box .discount {
+  padding:10px
+}
+#idecheckoutvm-coupon-box .discount .fields {
+  display: inline-block;
+  width: 65%;
+}
+#idecheckoutvm-coupon-box .discount .actions {
+  display: inline-block;
+  float: right;
+  width: 30%;
+}
+#idecheckoutvm-coupon-box .idecheckoutvm-link{
+  width:100%;
+  display:inline-block
+}
+
+#checkout-step-shipping .step-title.step-2,
+#checkout-step-coupon .step-title.step-4,
+#checkout-step-payment-method .step-title.step-5{
+  background-color:#FFF;
+  color:#000
+}
+#checkout-step-coupon .step-title.step-4.virtual,
+#checkout-step-payment-method .step-title.step-5.virtual {
+  background-color:#bcbbb6;
+  color:#FFF
+}
+
+.step-1:first-letter:before{
+  content:"1";
+  font-size:30px
+}
+
+#checkout-review-table {
+  width: 100%;
+}
+
+#checkout-review-table thead th{
+  border-bottom:1px solid #e0e0e0;
+  font-weight:700
+}
+
+#checkout-review-table tbody tr.first td{
+  width:60%
+}
+
+#checkout-review-table tbody tr td.a-center{
+  width:10%
+}
+
+#checkout-review-table tbody tr td.a-right{
+  width:30%
+}
+
+#checkout-review-table tfoot tr.last td{
+  font-size:15px
+}
+
+.page-title{
+  margin:0 0 10px;
+  border:0 solid
+}
+
+.page-title h1{
+  padding-left:10px
+}
+
+#idecheckoutvm-coupon-box h2,
+.checkout-agreements-load .agreement-content h2{
+  background-color:#bcbbb6;
+  color:#FFF;
+  margin-bottom:0;
+  padding:5px 0 5px 10px;
+}
+#idecheckoutvm-login-box {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+#idecheckoutvm-login-box .actions {margin: 10px 0;}
+#idecheckoutvm-coupon-box .idecheckoutvm-link,
+#idecheckoutvm-login-box .idecheckoutvm-link,
+.checkout-agreements-load .idecheckoutvm-link{
+  width:40px;
+  display:inline-block;
+  top:19px;
+  right:19px;
+  position:absolute
+}
+
+#idecheckoutvm-coupon-box .idecheckoutvm-link a,
+#idecheckoutvm-login-box .idecheckoutvm-link a,
+.checkout-agreements-load .idecheckoutvm-link a{
+  color:#FFF;
+  margin: 0;
+}
+
+.checkout-agreements-load .agreement-content{
+  background-color:#fff
+}
+
+.checkout-agreements-load .agreement-content div.content{
+  border:1px solid #bcbbb6
+}
+
+#checkout-news-load {
+  position: relative;
+}
+
+.checkout-agreements-load {
+  margin-top: 30px;
+}
+
+.checkout-agreements-load #idecheckoutvm-agreement-1-window .page-title {
+  font-weight: 700;
+}
+
+.checkout-agreements-load #idecheckoutvm-agreement-1-window .content {
+  height: 100px;
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+.modal-idecheckoutvm {
+  padding: 10px;
+}
+
+.checkout-agreements-load #idecheckoutvm-agreement-1-window.modal-idecheckoutvm .content {
+  height: 250px;
+}
+
+.checkout-agreements-load .agree,
+.newsletter {
+  margin-top: 10px;
+  margin-bottom: 0;
+  position: relative;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.newsletter label {
+  font-weight: normal;
+}
+.step-title span {
+  font-size: 30px;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+#checkout-shipping-method-additional-load {padding: 0;}
+
+.idecheckoutvm-index-index .col-lg-12.col-md-12.col-sm-12.col-xs-12 {
+  position: inherit;
+}
+
+.idecheckoutvm-index-index .page-title h1 {
+  padding-left: 0;
+}
+
+#ide-checkout-form .buttons-set {
+  margin: 2em 0 0;
+}
+
+#ide-checkout-form #newsletter-signup {
+  position: absolute;
+  right: 230px;
+  top: 5px;
+}
+
+#ide-checkout-form ul.ssl-block {
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  padding: 0 10px;
+  position: relative;
+}
+
+#ide-checkout-form ul.ssl-block li:first-child{
+  float: left;
+  width: 50%;
+}
+
+#ide-checkout-form ul.ssl-block li:last-child{
+  float: right;
+  width: 50%;
+}
+#ide-checkout-form ul.ssl-block a.ssl {
+  background: url('../images/ssl.png') no-repeat 0 0;
+  width: 115px;
+  height: 32px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+#checkout-step-billing .step-body p.data-title,
+#header-shipping p.data-title,
+#checkout-step-shipping-method p.data-title,
+#checkout-step-payment-method p.data-title {
+  margin: 10px 0;
+  border-bottom: 1px solid #CCC;
+  font-weight: 700;
+}
+#idecheckoutvm-login-area {
+  width: 100%;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#idecheckoutvm-link-login {
+  cursor: pointer;
+  display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 0;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
+  -ms-transition: .4s;
+  transition: .4s;
+  width: 100%;
+  text-decoration: underline;
+}
+
+li.mp-cc-expiry,
+li.mp-cc-holder-cpf,
+li.payu-cc-expiry,
+li.payu-cc-holder-cpf,
+li.yapay-cc-expiry,
+li.yapay-cc-holder-cpf {
+  float: left;
+  width: 49%;
+}
+li.mp-cc-cvc,
+li.mp-cc-holder-phone,
+li.payu-cc-cvc,
+li.payu-cc-holder-phone,
+li.yapay-cc-cvc,
+li.yapay-cc-holder-phone {
+  float: right;
+  width: 49%;
+}
+li.mp-cc-expiry span {
+  margin-left: 0.5rem;
+}
+li.mp-cc-token {
+    clear: both;
+}
+input.mp-cc-number,
+input.payu-cc-number,
+input.yapay-cc-number {
+  padding-right: 60px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 60px;
+}
+li.mp-cc-holder,
+li.payu-cc-holder,
+li.yapay-cc-holder {
+  display: none;
+}
+li.payu-cc-expiry span,
+li.yapay-cc-expiry span {
+  margin-left: 0.5rem;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  #checkout-step-billing .step-body,
+  #header-shipping,
+  #checkout-step-shipping-method .step-body,
+  #checkout-step-payment-method {
+    padding: 0;
+  }
+
+  #ide-checkout-form .col3-set .col-1,
+  #ide-checkout-form .col3-set .col-2,
+  #ide-checkout-form .col3-set .col-3 {
+    width: 100%;
+    float: none;
+  }
+  #ide-checkout-form .col3-set .col-2,
+  #ide-checkout-form .col3-set .col-3 {
+    margin-top: 20px
+  }
+  #ide-checkout-form .form-list .fields {
+    width: 100%;
+  }
+  #checkout-step-shipping-method .step-title, #checkout-step-payment-method .step-title, #checkout-review .step-title {border-left: 0;}
+
+  #ide-checkout-form .form-list .fields.lastname,
+  .form-list .fields.street3,
+  .form-list .fields.city, .form-list .fields.country, .form-list .fields.fax, .form-list .fields.confirm_password, .form-list .fields.gender, .form-list .fields.mobile, .form-list .fields.taxvat,
+  .form-list .fields.nome_fantasia,
+  .form-list .fields.telephone {
+    margin-left: 0;
+  }
+  #ide-checkout-form .form-list .fields.mobile ul, .form-list .fields.telephone ul {
+    padding-top: 0;
+  }
+  #ide-checkout-form .form-list .postcode-help {
+    padding: 0;
+  }
+  #ide-checkout-form select, #ide-checkout-form .input-text {
+    width: 100%;
+  }
+  #ide-checkout-form #newsletter-signup {
+    position: relative;
+    right: 0;
+  }
+  #ide-checkout-form .buttons-set {
+    text-align: center;
+  }
+  #checkout-review-table thead th:nth-child(1) {
+    width: 55%;
+    float: left;
+    text-align: left !important;
+  }
+  #checkout-review-table thead th:nth-child(2) {
+    width: 15%;
+    float: left;
+  }
+  #checkout-review-table thead th:nth-child(3) {
+    text-align: right !important;
+  }
+  #checkout-review-table tbody td:nth-child(1) {
+    width: 55%;
+    float: left;
+    text-align: left !important;
+  }
+  #checkout-review-table tbody td:nth-child(2) {
+    width: 15%;
+    float: left;
+  }
+  #checkout-review-table tbody td:nth-child(3) {
+    text-align: right !important;
+  }
+  #checkout-review-table tfoot td:nth-child(1) {
+    width: 60%;
+    float: left;
+    text-align: left !important;
+  }
+  #checkout-review-table tfoot td:nth-child(2) {
+    float: none;
+    text-align: right !important;
+    width: 39%;
+  }
+  #checkout-review-submit button.checkout {
+    width: 100%;
+  }
+  #checkout-review-table tfoot .a-right {padding: 5px 0;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #ide-checkout-form .form-list .fields {
+    width: 100%;
+  }
+  #ide-checkout-form .form-list .fields.lastname, .form-list .fields.street3, .form-list .fields.city, .form-list .fields.country, .form-list .fields.fax, .form-list .fields.confirm_password, .form-list .fields.gender, .form-list .fields.mobile, .form-list .fields.taxvat, .form-list .fields.nome_fantasia {
+    margin-left: 0;
+  }
+  #ide-checkout-form .form-list .fields.mobile ul, .form-list .fields.telephone ul {
+    padding-top: 0;
+  }
+  #ide-checkout-form .form-list .postcode-help {
+    padding: 0;
+  }
+  #ide-checkout-form select, #ide-checkout-form .input-text {
+    width: 97%;
+  }
+  #ide-checkout-form #newsletter-signup {
+    position: relative;
+    right: 0;
+  }
+  #ide-checkout-form .form-list .tipo_pessoa div {
+    width: auto;
+  }
+  #ide-checkout-form .form-list .tipo_pessoa div.J {
+    margin-left: 0;
+  }
+  #checkout-step-shipping-method .step-title.step-3 {
+    font-size: 13px;
+  }
+}

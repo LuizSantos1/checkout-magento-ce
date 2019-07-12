@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Modulo IdeCheckoutvm" basedir=".">
+	<property file="${basedir}/build.properties"/>
+
+	<echo>--------------------------------Modulo IdeCheckoutvm--------------------------------</echo>
+
+	<target name="instalar">
+		<ant antfile="build.xml" target="_copiar-modulo">
+			<property name="ambiente" value="${ambiente}"/>
+			<property name="diretorios" value="${diretorios.IdeCheckoutvm}"/>
+			<property name="arquivos" value="${arquivos.IdeCheckoutvm}"/>
+		</ant>
+	</target>
+
+	<target name="remover">
+		<ant antfile="build.xml" target="_remover-modulo-publicado">
+			<property name="ambiente" value="${ambiente}"/>
+			<property name="diretorios" value="${diretorios.IdeCheckoutvm}"/>
+			<property name="arquivos" value="${arquivos.IdeCheckoutvm}"/>
+		</ant>
+	</target>
+
+	<target name="_preparar-pacote">
+		<ant antfile="build.xml" target="_remover-modulo-publicado">
+			<property name="ambiente" value="${ambiente}"/>
+			<property name="diretorios" value="${diretorios.IdeCheckoutvm}"/>
+			<property name="arquivos" value="${arquivos.IdeCheckoutvm}"/>
+		</ant>
+
+		<ant antfile="build.xml" target="_copiar-modulo">
+			<property name="ambiente" value="${ambiente}"/>
+			<property name="diretorios" value="${diretorios.IdeCheckoutvm}"/>
+			<property name="arquivos" value="${arquivos.IdeCheckoutvm}"/>
+		</ant>
+	</target>
+
+	<target name="_pre-instalar-modulo">
+		<replace file="${compilacao}/app/design/frontend/base/default/layout/ideasa/idecheckoutvm.xml"
+						 token="##idea.versao##" value="${idea.versao}"/>
+	</target>
+
+	<target name="_compactar-todos-js-css">
+		<ant antfile="build.xml" target="_compactar-todos-js-css">
+			<property name="ambiente" value="${ambiente}"/>
+			<property name="arquivos" value="${compactar.IdeCheckoutvm}"/>
+		</ant>
+	</target>
+</project>

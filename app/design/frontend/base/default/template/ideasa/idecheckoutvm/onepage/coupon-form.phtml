@@ -1,0 +1,32 @@
+<div id="idecheckoutvm-coupon-box">
+  <div id="idecheckoutvm-coupon-message"></div>
+  <div class="discount">
+    <div class="fields code">
+      <input type="hidden" name="remove" id="remove:coupone" value="0" />
+      <div class="input-box">
+        <input class="input-text" id="coupon:code" name="coupon_code" value="<?php echo $this->htmlEscape($this->getCouponCode()) ?>" />
+      </div>
+    </div>
+    <div class="actions">
+      <a href="javascript:void(0);" id="idecheckoutvm-button-coupon" title="<?php echo $this->__('Apply Coupon') ?>" style="<?php echo (strlen($this->getCouponCode()) ? 'display:none;' : '') ?>"><?php echo $this->__('Usar') ?></a>
+      <a href="javascript:void(0);" id="idecheckoutvm-button-cancel-coupon" title="<?php echo $this->__('Cancel Coupon') ?>" value="<?php echo $this->__('Cancel Coupon') ?>" style="<?php echo (!strlen($this->getCouponCode()) ? 'display:none;' : '') ?>"><?php echo $this->__('Cancelar') ?></a>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  //<![CDATA[
+  Event.observe(window, 'load', function() {
+    var checkoutVmCouponInst = new CheckoutVmCoupon('ide-checkout-form', {
+      coupon: '<?php echo $this->getUrl('idecheckoutvm/update/coupon', array('_secure' => true)) ?>',
+      redirect: '<?php echo $this->getUrl('idecheckoutvm/index/index', array('_secure' => true)) ?>'
+    });
+    $('idecheckoutvm-button-coupon').observe('click', function() {
+      checkoutVmCouponInst.doValid();
+    });
+    $('idecheckoutvm-button-cancel-coupon').observe('click', function() {
+      checkoutVmCouponInst.doCancel();
+    });
+  });
+  //]]>
+</script>

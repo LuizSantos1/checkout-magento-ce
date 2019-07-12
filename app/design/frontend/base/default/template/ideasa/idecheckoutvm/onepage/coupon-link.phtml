@@ -1,0 +1,14 @@
+<?php
+if (!Mage::helper('idecheckoutvm/checkout')->isShowCouponLink()) {
+    return;
+}
+?>
+<div id="checkout-step-coupon" class="idecheckoutvm-block">
+    <div class="step-title step-3">
+        <div class="mask">
+            <span><?php echo $this->__('Passo 2'); ?></span>
+            <?php echo $this->__('Cupom de Desconto') ?>
+        </div>
+    </div>
+    <?php echo $this->getChildHtml('checkout.coupon.form'); ?>
+</div>

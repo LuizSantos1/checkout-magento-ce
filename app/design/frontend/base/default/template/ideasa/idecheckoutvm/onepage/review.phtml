@@ -1,0 +1,24 @@
+<div id="checkout-review" class="idecheckoutvm-block">
+  <div class="step-title step-7">
+    <div class="mask">
+      <?php echo $this->__('Resumo do Pedido') ?>
+    </div>
+  </div>
+
+  <div id="checkout-review-load">
+    <?php echo $this->getChildHtml('info') ?>
+  </div>
+
+  <div id="checkout-review-submit">
+    <?php
+    echo $this->getChildHtml('agreements');
+    echo $this->getChildHtml('news');
+    ?>
+    <div class="buttons-set" id="review-buttons-container">
+      <button id="idecheckoutvm-place-order-button" type="submit" title="<?php echo $this->__('Place Order Now') ?>" class="button checkout" onclick="checkout.save();
+                return false;">
+        <span><span><?php echo $this->__('Realizar Pagamento') ?></span></span>
+      </button>
+    </div>
+  </div>
+</div>

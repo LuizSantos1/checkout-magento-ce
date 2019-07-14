@@ -1,15 +1,53 @@
-# README #
+# Checkout Transparente para Magento
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Este checkout foi extendido e melhorado tendo como base a versão do Checkout Venda Mais da empresa IDEA Tecnologia da Informação S/A. 
 
-### What is this repository for? ###
+## Recursos
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Perguntas Frequentes
+
+## Dependências
+
+O módulo de checkout para Magento precisa do módulo [Bootstrap para Magento CE](https://github.com/eloom/bootstrap-magento-ce)
 
 
-### Como remover o Checkout Venda Mais? ###
+## Compatibilidade
+
+- [x] Magento 1.9.3.x
+
+- [x] PHP/PHP-FPM 5.6
+
+## Documentação
+
+A documentação do pode ser acessada neste link [Checkout Venda Mais](https://ipagare.zendesk.com/hc/pt-br/sections/202400166-7-Checkout-Venda-Mais)
+
+## Começando
+
+Os projetos da élOOm utilizam o [Apache Ant](https://ant.apache.org/) para publicar o projeto nos ambientes de **desenvolvimento** e de **teste** e para gerar os pacotes para o **ambiente de produção**.
+
+- Publicando no **ambiente local**
+
+	- no arquivo **build-desenv.properties**, informe o path do **Document Root** na propriedade "projetos.path";
+	
+	- na raiz deste projeto, execute, no prompt, o comando ```ant -f build-desenv.xml```.
+	
+	
+	> a tarefa Ant irá copiar todos os arquivos do projeto no seu Magento e limpar a cache.
+	
+
+- Publicando para o **ambiente de produção**
+
+	- na raiz deste projeto, execute, no prompt, o comando ```ant -f build-producao.xml```.
+	
+	
+	> a tarefa Ant irá gerar um pacote no formato .zip, no caminho definido na propriedade "projetos.path", do arquivo **build-producao.properties**.
+
+	> os arquivos .css e .js serão comprimidos automáticamente usando o [YUI Compressor](https://yui.github.io/yuicompressor/).
+
+
+## Removendo o Checkout Venda Mais 
+
+##### Removendo do banco de dados
 
 DELETE FROM `core_resource` WHERE CODE = 'idecheckoutvm_setup';
 

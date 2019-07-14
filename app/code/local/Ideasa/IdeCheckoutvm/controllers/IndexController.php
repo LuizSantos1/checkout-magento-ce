@@ -246,9 +246,7 @@ class Ideasa_IdeCheckoutvm_IndexController extends Mage_Checkout_Controller_Acti
         }
       }
       $this->logger->info(Mage::helper('idecheckoutvm/account')->logAccountInformation('Antes de salvar o pedido.'));
-
       $this->getOnepage()->saveOrder();
-
       $this->logger->info(Mage::helper('idecheckoutvm/account')->logAccountInformation('Após salvar o pedido.'));
 
       if ($redirectUrl != 'payment_same_screen') {

@@ -131,30 +131,21 @@ IdeCheckoutvm.prototype = {
     this.buttonCheckoutvm.disable();
 
     var params = Form.serialize(this.form);
-    var request = new Ajax.Request(
-            payment.updatePaymentUrl, {
-              asynchronous: true,
-              method: 'post',
-              parameters: params,
-              onSuccess: this.process.bindAsEventListener(this)
-            });
-  },
-  process: function () {
-    var params = Form.serialize(this.form);
     if (this.agreementsForm) {
       params += '&' + Form.serialize(this.agreementsForm);
     }
     params.save = true;
     var request = new Ajax.Request(
-            this.saveUrl, {
-              method: 'post',
-              parameters: params,
-              onComplete: this.onComplete,
-              onSuccess: this.onSave,
-              onFailure: checkout.ajaxFailure.bind(checkout)
-            }
+      this.saveUrl, {
+        method: 'post',
+        parameters: params,
+        onComplete: this.onComplete,
+        onSuccess: this.onSave,
+        onFailure: checkout.ajaxFailure.bind(checkout)
+      }
     );
   },
+
   nextStep: function (transport) {
     var response = null;
     if (transport && transport.responseText) {
@@ -336,8 +327,8 @@ IdeBilling.prototype = {
     checkout.setLoadWaiting('shipping-method');
     checkout.setLoadWaiting('payment-method');
     checkout.setLoadWaiting('review');
-    var request = new Ajax.Request(
-            checkout.getBillingUrl(), {
+
+    var request = new Ajax.Request(checkout.getBillingUrl(), {
       method: 'post',
       onComplete: this.onComplete,
       onSuccess: this.onAfterUpdate,

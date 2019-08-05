@@ -124,7 +124,6 @@
   padding:0 0 10px 10px;
   clear: both;
 }
-
 #checkout-step-shipping{
   padding: 0 10px;
 }
@@ -546,7 +545,9 @@ li.mp-cc-holder-cpf,
 li.payu-cc-expiry,
 li.payu-cc-holder-cpf,
 li.yapay-cc-expiry,
-li.yapay-cc-holder-cpf {
+li.yapay-cc-holder-cpf,
+li.pagarme-cc-expiry,
+li.pagarme-cc-holder-cpf {
   float: left;
   width: 49%;
 }
@@ -555,7 +556,9 @@ li.mp-cc-holder-phone,
 li.payu-cc-cvc,
 li.payu-cc-holder-phone,
 li.yapay-cc-cvc,
-li.yapay-cc-holder-phone {
+li.yapay-cc-holder-phone,
+li.pagarme-cc-cvc,
+li.pagarme-cc-holder-phone {
   float: right;
   width: 49%;
 }
@@ -567,7 +570,8 @@ li.mp-cc-token {
 }
 input.mp-cc-number,
 input.payu-cc-number,
-input.yapay-cc-number {
+input.yapay-cc-number,
+input.pagarme-cc-number {
   padding-right: 60px;
   background-repeat: no-repeat;
   background-position: right center;
@@ -575,11 +579,13 @@ input.yapay-cc-number {
 }
 li.mp-cc-holder,
 li.payu-cc-holder,
-li.yapay-cc-holder {
+li.yapay-cc-holder,
+li.pagarme-cc-holder {
   display: none;
 }
 li.payu-cc-expiry span,
-li.yapay-cc-expiry span {
+li.yapay-cc-expiry span,
+li.pagarme-cc-expiry span {
   margin-left: 0.5rem;
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {

@@ -26,9 +26,6 @@ class Ideasa_IdeCheckoutvm_IndexController extends Mage_Checkout_Controller_Acti
       'review' => '_getReviewHtml',
   );
 
-  /** @var Mage_Sales_Model_Order */
-  protected $_order;
-
   /**
    * Initialize
    */
@@ -40,7 +37,7 @@ class Ideasa_IdeCheckoutvm_IndexController extends Mage_Checkout_Controller_Acti
    * @return Mage_Checkout_OnepageController
    */
   public function preDispatch() {
-    parent::preDispatch();
+  	parent::preDispatch();
     $this->_preDispatchValidateCustomer();
 
     $quote = Mage::getSingleton('checkout/session')->getQuote();
@@ -59,7 +56,7 @@ class Ideasa_IdeCheckoutvm_IndexController extends Mage_Checkout_Controller_Acti
       }
     }
 
-    return $this;
+		return $this;
   }
 
   protected function _ajaxRedirectResponse() {
@@ -119,7 +116,7 @@ class Ideasa_IdeCheckoutvm_IndexController extends Mage_Checkout_Controller_Acti
   }
 
   public function indexAction() {
-    $this->logger->info(Mage::helper('idecheckoutvm/account')->logAccountInformation('Página inicial do checkout.'));
+		$this->logger->info(Mage::helper('idecheckoutvm/account')->logAccountInformation('Página inicial do checkout.'));
 
     if (!Mage::helper('idecheckoutvm')->isCheckoutEnabled()) {
       Mage::getSingleton('checkout/session')->addError($this->__('The Checkout Venda Mais is disabled.'));
@@ -141,7 +138,7 @@ class Ideasa_IdeCheckoutvm_IndexController extends Mage_Checkout_Controller_Acti
 
     Mage::getSingleton('checkout/session')->setCartWasUpdated(false);
     Mage::getSingleton('customer/session')->setBeforeAuthUrl(Mage::getUrl('*/*/*', array('_secure' => true)));
-    
+
     $this->getOnepage()->initCheckout();
     
     $this->loadLayout();

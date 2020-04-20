@@ -11,12 +11,6 @@ class Ideasa_IdeCheckoutvm_Model_Observers_OnepageDefaults extends Mage_Core_Mod
     private $logger;
 
     /**
-     *
-     * @var type
-     */
-    protected $paymentMethods = array();
-
-    /**
      * Class constructor
      * Set customer already exists message
      */

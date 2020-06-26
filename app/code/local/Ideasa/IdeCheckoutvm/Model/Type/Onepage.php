@@ -598,17 +598,17 @@ class Ideasa_IdeCheckoutvm_Model_Type_Onepage extends Mage_Core_Model_Abstract {
         $addressForm->setEntity($address);
 
         $addressData = $address->getData();
-        $addressData['addressType'] = 'billing';
+        $addressData['addressType'] = 'shipping';
         $addressErrors = $addressForm->validateData($address->getData());
         if ($addressErrors !== true) {
           Ideasa_IdeCheckoutvm_ValidatorException::throwException($this->helper->__('Please check shipping address information.'), $addressErrors);
         }
       }
     } else {
-      $addressForm->setEntity($address);
+			$addressForm->setEntity($address);
       // emulate request object
       $addressData = $addressForm->extractData($addressForm->prepareRequest($data));
-      $addressData['addressType'] = 'billing';
+      $addressData['addressType'] = 'shipping';
       $addressErrors = $addressForm->validateData($addressData);
       if ($addressErrors !== true) {
         Ideasa_IdeCheckoutvm_ValidatorException::throwException($this->helper->__('Please check shipping address information.'), $addressErrors);

@@ -5,6 +5,9 @@
 "Already registered CVM?", "Já tenho cadastro, fazer login"
 "Auto-generate account for new emails", "Criação automática de conta"
 "Agreement is required","Termos e Condições do Contração é obrigatório"
+"Authenticate Before","Cliente precisa estar autenticado"
+"Authenticate before for Place Order", "To complete the purchase, it is necessary to have a customer account and have logged into the system."
+
 #-- B --
 
 #-- C --
@@ -78,7 +81,6 @@
 "Show Subscribe to Newsletter Checkbox", "Mostrar Assinar Newsletter"
 "Show Comment Field", "Mostrar Campo de Comentário"
 "Ship to the same address", "Entregar no mesmo endereço"
-"Seus dados", "Seus dados"
 #-- T --
 "The Checkout Venda Mais is disabled.", "O Checkout Venda Mais está desabilitado."
 "There is already a customer registered using this email address. Please login using this email address or enter a different email address to register your account.", "E-mail já cadastrado. Informe sua senha para entrar."

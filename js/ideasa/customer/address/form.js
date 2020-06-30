@@ -34,8 +34,7 @@ IdeCustomer.prototype = {
                 this.titleStreet2 = response.street_address_2;
                 this.titleStreet3 = response.street_address_3;
                 this.titleStreet4 = response.street_address_4;
-            }
-            catch (e) {
+            } catch (e) {
             }
         }
         

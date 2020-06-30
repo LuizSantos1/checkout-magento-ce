@@ -6,9 +6,7 @@ $conn = $installer->getConnection();
 $installer->run("DELETE FROM {$this->getTable('core/config_data')} WHERE path LIKE  '%idecheckoutvm/ordering_fields%'");
 
 $attribute = Mage::getSingleton('customer/attribute');
-/* * *****************************************************************************
- * ******************************** Tipo Pessoa *********************************
- * ***************************************************************************** */
+
 $tipoPessoa = $attribute->loadByCode('customer', 'tipo_pessoa');
 if ($tipoPessoa->getId() === null) {
     $this->addAttribute('customer', 'tipo_pessoa', array(

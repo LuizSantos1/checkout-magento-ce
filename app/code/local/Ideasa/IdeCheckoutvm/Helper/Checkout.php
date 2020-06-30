@@ -4,17 +4,18 @@
 
 class Ideasa_IdeCheckoutvm_Helper_Checkout extends Mage_Core_Helper_Abstract {
 
+
   /**
    * 
    * 
    * @return type
    */
   public function isLoginLinkEnable() {
-    return (bool) Mage::getStoreConfig(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::LOGIN_LINK);
+    return Mage::getStoreConfigFlag(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::LOGIN_LINK);
   }
 
   public function isAgreementsEnable() {
-    return (bool) Mage::getStoreConfig(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::AGREEMENTS);
+    return Mage::getStoreConfigFlag(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::AGREEMENTS);
   }
 
   /**
@@ -35,7 +36,7 @@ class Ideasa_IdeCheckoutvm_Helper_Checkout extends Mage_Core_Helper_Abstract {
   }
 
   public function isShowCouponLink() {
-    return Mage::getStoreConfig(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::COUPON);
+    return Mage::getStoreConfigFlag(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::COUPON);
   }
 
   

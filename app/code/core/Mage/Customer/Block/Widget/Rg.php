@@ -4,7 +4,7 @@ class Mage_Customer_Block_Widget_Rg extends Mage_Customer_Block_Widget_Abstract 
 
     public function _construct() {
         parent::_construct();
-        $this->setTemplate('customer/widget/rg.phtml');
+        $this->setTemplate('ideasa/customer/widget/rg.phtml');
     }
 
     public function isEnabled() {

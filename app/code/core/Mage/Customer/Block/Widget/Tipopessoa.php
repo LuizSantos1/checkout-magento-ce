@@ -7,7 +7,7 @@ class Mage_Customer_Block_Widget_Tipopessoa extends Mage_Customer_Block_Widget_A
      */
     public function _construct() {
         parent::_construct();
-        $this->setTemplate('customer/widget/tipo-pessoa.phtml');
+        $this->setTemplate('ideasa/customer/widget/tipo-pessoa.phtml');
     }
 
     /**

@@ -8,7 +8,7 @@ class Ideasa_IdeCheckoutvm_Block_Onepage_Billing extends Ideasa_IdeCheckoutvm_Bl
 
     public function _construct() {
         parent::_construct();
-        $this->showTipoPessoa = $this->showTipoPessoa();
+        $this->isShowTipoPessoa = $this->isShowTipoPessoa();
     }
 
     protected function loadDependencies() {
@@ -124,7 +124,7 @@ class Ideasa_IdeCheckoutvm_Block_Onepage_Billing extends Ideasa_IdeCheckoutvm_Bl
         if ($this->customerLoggedIn) {
             return false;
         }
-        if (!$this->showTipoPessoa) {
+        if (!$this->isShowTipoPessoa) {
             $this->pessoaBlock->printHiddenTipoPessoa();
         } else {
             $this->pessoaBlock->setTipoPessoa($this->getQuote()->getTipoPessoa());
@@ -133,7 +133,7 @@ class Ideasa_IdeCheckoutvm_Block_Onepage_Billing extends Ideasa_IdeCheckoutvm_Bl
     }
 
     public function printRg() {
-        if (!$this->showRg()) {
+        if (!$this->isShowRg()) {
             return false;
         }
         $this->pessoaBlock->setRg($this->getQuote()->getRg());
@@ -141,10 +141,10 @@ class Ideasa_IdeCheckoutvm_Block_Onepage_Billing extends Ideasa_IdeCheckoutvm_Bl
     }
 
     public function printInscEst() {
-        if (!$this->showTipoPessoa) {
+        if (!$this->isShowTipoPessoa) {
             return false;
         }
-        if (!$this->showInscEst()) {
+        if (!$this->isShowInscEst()) {
             return false;
         }
         $this->pessoaBlock->setInscEst($this->getQuote()->getInscEst());
@@ -152,10 +152,10 @@ class Ideasa_IdeCheckoutvm_Block_Onepage_Billing extends Ideasa_IdeCheckoutvm_Bl
     }
 
     public function printRazaoSocial() {
-        if (!$this->showTipoPessoa) {
+        if (!$this->isShowTipoPessoa) {
             return false;
         }
-        if (!$this->showRazaoSocial()) {
+        if (!$this->isShowRazaoSocial()) {
             return false;
         }
         $this->pessoaBlock->setRazaoSocial($this->getQuote()->getRazaoSocial());
@@ -163,10 +163,10 @@ class Ideasa_IdeCheckoutvm_Block_Onepage_Billing extends Ideasa_IdeCheckoutvm_Bl
     }
 
     public function printNomeFantasia() {
-        if (!$this->showTipoPessoa) {
+        if (!$this->isShowTipoPessoa) {
             return false;
         }
-        if (!$this->showNomeFantasia()) {
+        if (!$this->isShowNomeFantasia()) {
             return false;
         }
         $this->pessoaBlock->setNomeFantasia($this->getQuote()->getNomeFantasia());

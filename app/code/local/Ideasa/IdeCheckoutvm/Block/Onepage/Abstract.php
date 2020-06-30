@@ -78,7 +78,7 @@ abstract class Ideasa_IdeCheckoutvm_Block_Onepage_Abstract extends Mage_Checkout
      *
      * @var type
      */
-    protected $showTipoPessoa = false;
+    protected $isShowTipoPessoa = false;
 
     public function _construct() {
         parent::_construct();
@@ -279,7 +279,7 @@ abstract class Ideasa_IdeCheckoutvm_Block_Onepage_Abstract extends Mage_Checkout
      *
      * @return type boolean
      */
-    protected function showTipoPessoa() {
+    protected function isShowTipoPessoa() {
         return (bool) (Mage::getStoreConfig(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::TIPO_PESSOA));
     }
 
@@ -287,7 +287,7 @@ abstract class Ideasa_IdeCheckoutvm_Block_Onepage_Abstract extends Mage_Checkout
      *
      * @return type boolean
      */
-    protected function showRg() {
+    protected function isShowRg() {
         if ($this->customerLoggedIn) {
             return false;
         }
@@ -298,7 +298,7 @@ abstract class Ideasa_IdeCheckoutvm_Block_Onepage_Abstract extends Mage_Checkout
      *
      * @return type boolean
      */
-    protected function showInscEst() {
+    protected function isShowInscEst() {
         if ($this->customerLoggedIn) {
             return false;
         }
@@ -309,7 +309,7 @@ abstract class Ideasa_IdeCheckoutvm_Block_Onepage_Abstract extends Mage_Checkout
      *
      * @return type boolean
      */
-    protected function showRazaoSocial() {
+    protected function isShowRazaoSocial() {
         if ($this->customerLoggedIn) {
             return false;
         }
@@ -320,7 +320,7 @@ abstract class Ideasa_IdeCheckoutvm_Block_Onepage_Abstract extends Mage_Checkout
      *
      * @return type boolean
      */
-    protected function showNomeFantasia() {
+    protected function isShowNomeFantasia() {
         if ($this->customerLoggedIn) {
             return false;
         }

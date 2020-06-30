@@ -4,7 +4,7 @@ class Mage_Customer_Block_Widget_Nomefantasia extends Mage_Customer_Block_Widget
 
     public function _construct() {
         parent::_construct();
-        $this->setTemplate('customer/widget/nome-fantasia.phtml');
+        $this->setTemplate('ideasa/customer/widget/nome-fantasia.phtml');
     }
 
     public function isEnabled() {

@@ -6,7 +6,7 @@ class Mage_Customer_Block_Address_Mobile extends Mage_Directory_Block_Data {
 
     public function _construct() {
         parent::_construct();
-        $this->setTemplate('customer/address/mobile.phtml');
+        $this->setTemplate('ideasa/customer/address/mobile.phtml');
     }
 
     public function isEnabled() {

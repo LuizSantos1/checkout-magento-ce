@@ -33,7 +33,7 @@ class Ideasa_IdeCheckoutvm_Helper_Account extends Mage_Core_Helper_Abstract {
    * @return type
    */
   public function isRegistrationSuccess() {
-    return (bool) (Mage::getStoreConfig(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::REGISTRATION_MODE) == Ideasa_IdeCheckoutvm_Model_System_Config_Source_Registration::REGISTRATION_SUCCESS);
+    return (Mage::getStoreConfigFlag(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::REGISTRATION_MODE) == Ideasa_IdeCheckoutvm_Model_System_Config_Source_Registration::REGISTRATION_SUCCESS);
   }
 
   /**
@@ -41,11 +41,19 @@ class Ideasa_IdeCheckoutvm_Helper_Account extends Mage_Core_Helper_Abstract {
    * @return type
    */
   public function isAutoGenerateAccount() {
-    return (bool) (Mage::getStoreConfig(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::REGISTRATION_MODE) == Ideasa_IdeCheckoutvm_Model_System_Config_Source_Registration::AUTO_GENERATE_ACCOUNT);
+    return (Mage::getStoreConfigFlag(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::REGISTRATION_MODE) == Ideasa_IdeCheckoutvm_Model_System_Config_Source_Registration::AUTO_GENERATE_ACCOUNT);
   }
 
+	/**
+	 *
+	 * @return type
+	 */
+	public function isAuthenticateBefore() {
+		return (Mage::getStoreConfigFlag(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::REGISTRATION_MODE) == Ideasa_IdeCheckoutvm_Model_System_Config_Source_Registration::AUTHENTICATE_BEFORE);
+	}
+
   public function isLoginLinkEnable() {
-    return (bool) Mage::getStoreConfig(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::LOGIN_LINK);
+    return Mage::getStoreConfigFlag(Ideasa_IdeCheckoutvm_ConfiguracoesSystem::LOGIN_LINK);
   }
 
   public function isShowLoginLink() {

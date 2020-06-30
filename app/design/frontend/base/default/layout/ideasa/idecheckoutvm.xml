@@ -1,5 +1,59 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
+  <customer_account_create>
+    <reference name="head">
+      <action method="addItem" ifconfig="idecheckoutvm/geral/active">
+        <type>js</type>
+        <name>ideasa/idecheckoutvm/app.js?##idea.versao##</name>
+      </action>
+      <action method="addItem" ifconfig="idecheckoutvm/geral/active">
+        <type>js</type>
+        <name>ideasa/persistence/customer/form/register.js?##idea.versao##</name>
+      </action>
+    </reference>
+    <reference name="customer_form_register">
+      <action method="setTemplate" ifconfig="idecheckoutvm/geral/active">
+        <template>ideasa/persistent/customer/form/register.phtml</template>
+      </action>
+    </reference>
+  </customer_account_create>
+
+  <customer_account_edit translate="label">
+    <reference name="head">
+      <action method="addItem" ifconfig="idecheckoutvm/geral/active">
+        <type>js</type>
+        <name>ideasa/idecheckoutvm/app.js?##idea.versao##</name>
+      </action>
+      <action method="addItem" ifconfig="idecheckoutvm/geral/active">
+        <type>js</type>
+        <name>ideasa/persistence/customer/form/register.js?##idea.versao##</name>
+      </action>
+    </reference>
+    <reference name="customer_edit">
+      <action method="setTemplate" ifconfig="idecheckoutvm/geral/active">
+        <template>ideasa/customer/form/edit.phtml</template>
+      </action>
+    </reference>
+  </customer_account_edit>
+
+  <customer_address_form translate="label">
+    <reference name="head">
+      <action method="addItem" ifconfig="idecheckoutvm/geral/active">
+        <type>js</type>
+        <name>ideasa/customer/address/form.js?##idea.versao##</name>
+      </action>
+    </reference>
+  </customer_address_form>
+
+  <customer_address_edit translate="label">
+    <reference name="head">
+      <action method="addItem" ifconfig="idecheckoutvm/geral/active">
+        <type>js</type>
+        <name>ideasa/customer/address/form.js?##idea.versao##</name>
+      </action>
+    </reference>
+  </customer_address_edit>
+
   <checkout_cart_index>
     <reference name="checkout.cart.top_methods">
       <action method="unsetChild" ifconfig="idecheckoutvm/geral/active">
@@ -101,8 +155,8 @@
         <block type="idecheckoutvm/onepage_billing" name="checkout.onepage.billing" as="billing.address" template="ideasa/idecheckoutvm/onepage/billing.phtml">
           <block type="customer/form_login" name="customer.login.link" template="ideasa/idecheckoutvm/login-link.phtml">
             <block type="customer/form_login" name="customer.login.form" template="ideasa/idecheckoutvm/login-form.phtml"/>
-          </block>    
-                    
+          </block>
+
           <block type="idecheckoutvm/onepage_account" name="checkout.onepage.billing.account" as="account" template="ideasa/idecheckoutvm/onepage/account.phtml"/>
         </block>
                 
@@ -214,22 +268,4 @@
       <block type="checkout/onepage_success" name="checkout.success" template="checkout/success.phtml"/>
     </reference>
   </idecheckoutvm_index_success>
-    
-  <customer_address_form translate="label">
-    <reference name="head">
-      <action method="addItem">
-        <type>js</type>
-        <name>ideasa/customer/address/form.js?##idea.versao##</name>
-      </action>
-    </reference>
-  </customer_address_form>
-    
-  <customer_address_edit translate="label">
-    <reference name="head">
-      <action method="addItem">
-        <type>js</type>
-        <name>ideasa/customer/address/form.js?##idea.versao##</name>
-      </action>
-    </reference>
-  </customer_address_edit>
 </layout>

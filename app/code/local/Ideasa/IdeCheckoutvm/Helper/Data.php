@@ -5,7 +5,7 @@
 class Ideasa_IdeCheckoutvm_Helper_Data extends Mage_Core_Helper_Abstract {
 
     public function isCheckoutEnabled() {
-        return (bool) Mage::getStoreConfig('idecheckoutvm/geral/active');
+        return Mage::getStoreConfigFlag('idecheckoutvm/geral/active');
     }
 
     public function getAgreeIds() {
@@ -25,12 +25,12 @@ class Ideasa_IdeCheckoutvm_Helper_Data extends Mage_Core_Helper_Abstract {
 
     // FIXME: verificar se há o módulo
     public function isAutocompleteCepEnable() {
-        return Mage::getStoreConfig(Ideasa_IdeAddons_ConfiguracoesSystem::AUTOCOMPLETE_CEP);
+        return Mage::getStoreConfigFlag(Ideasa_IdeAddons_ConfiguracoesSystem::AUTOCOMPLETE_CEP);
     }
 
     // FIXME: verificar se há o módulo
     public function isLinkCepEnable() {
-        return Mage::getStoreConfig(Ideasa_IdeAddons_ConfiguracoesSystem::SHOW_LINK_CEP);
+        return Mage::getStoreConfigFlag(Ideasa_IdeAddons_ConfiguracoesSystem::SHOW_LINK_CEP);
     }
 
     public function mascararCep($cep) {

@@ -4,7 +4,7 @@ class Mage_Customer_Block_Widget_Inscricao extends Mage_Customer_Block_Widget_Ab
 
     public function _construct() {
         parent::_construct();
-        $this->setTemplate('customer/widget/insc-est.phtml');
+        $this->setTemplate('ideasa/customer/widget/insc-est.phtml');
     }
 
     public function isEnabled() {

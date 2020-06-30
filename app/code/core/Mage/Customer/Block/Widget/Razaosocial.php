@@ -4,7 +4,7 @@ class Mage_Customer_Block_Widget_Razaosocial extends Mage_Customer_Block_Widget_
 
     public function _construct() {
         parent::_construct();
-        $this->setTemplate('customer/widget/razao-social.phtml');
+        $this->setTemplate('ideasa/customer/widget/razao-social.phtml');
     }
 
     public function isEnabled() {

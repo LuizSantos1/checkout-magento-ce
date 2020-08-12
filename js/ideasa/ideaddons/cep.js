@@ -9,7 +9,6 @@ var IdeCepAddon = Class.create({
     initialize: function(prefix, url) {
         this.prefix = prefix;
         this.cep = null;
-        this.cepProvider = null;
         this.url = url;
     },
     
@@ -58,10 +57,21 @@ var IdeCepAddon = Class.create({
         }
         this._clear();
 
-        this.cepProvider = new IdeCepProvider(this.url);
-        var address =this.cepProvider.get(this.cep);
-        this._fill(address);
-        this._afterCallGet();
+        var self = this;
+
+        new Ajax.Request(this.url, {
+            method: 'post',
+            onSuccess: function(transport) {
+                try {
+                    if(transport.status == 200) {
+                        var address = transport.responseText.evalJSON();
+                        self._fill(address);
+                    }
+                } catch(e) {
+                }
+            },
+            parameters: { cep: self.cep }
+        });
     },
     
     validate: function() {
@@ -102,6 +112,7 @@ var IdeCepAddon = Class.create({
         } catch (e) {
             $(this.prefix + ':street1').focus();
         }
+        this._afterCallGet();
     },
     
     _mccep: function(v) {
@@ -120,10 +131,7 @@ var IdeCepProvider = Class.create({
     get: function(cep) {
         var result = null;
         new Ajax.Request(this.url, {
-            parameters: {
-                cep: cep
-            },
-            asynchronous: false,
+            method: 'post',
             onSuccess: function(transport) {
                 try {
                     if(transport.status == 200) {
@@ -131,7 +139,8 @@ var IdeCepProvider = Class.create({
                     }
                 } catch(e) {
                 }
-            }.bind(this)
+            },
+            parameters: { cep: cep }
         });
         
         return result;

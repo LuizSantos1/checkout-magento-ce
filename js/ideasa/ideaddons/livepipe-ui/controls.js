@@ -345,7 +345,6 @@ Autocompleter.Base.prototype.getTokenBounds.getFirstDifferencePos = function(new
 Ajax.Autocompleter = Class.create(Autocompleter.Base, {
   initialize: function(element, update, url, options) {
     this.baseInitialize(element, update, options);
-    this.options.asynchronous  = true;
     this.options.onComplete    = this.onComplete.bind(this);
     this.options.defaultParams = this.options.parameters || null;
     this.url                   = url;

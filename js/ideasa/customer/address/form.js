@@ -21,7 +21,6 @@ IdeCustomer.prototype = {
     
     getTranslator: function() {
         var request = new Ajax.Request(this.translatorUrl, {
-                                       asynchronous: false,
                                        method: 'post',
                                        onSuccess: this._parseTranslator.bindAsEventListener(this)
         });

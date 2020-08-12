@@ -4,34 +4,34 @@
 
 class Ideasa_IdeAddons_Model_Repvirtual extends Mage_Core_Model_Abstract {
 
-	const TIME_OUT = 60;
-
 	public function getAddress($cep) {
 		$cep = preg_replace('/[\s\W]+/', '', $cep);
 
-		$curl = curl_init();
-		curl_setopt_array($curl, array(
-			CURLOPT_RETURNTRANSFER => 1,
-			CURLOPT_URL => 'http://republicavirtual.com.br/web_cep.php?cep=' . urlencode($cep) . '&formato=json'
-		));
+		$url = "http://republicavirtual.com.br/web_cep.php?cep=${cep}&formato=json";
+		$curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 5);
+		curl_setopt($curl, CURLOPT_TIMEOUT, 10);
 		$result = curl_exec($curl);
+
+		$httpStatus = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 		curl_close($curl);
 
-		if (!$result) {
-			return null;
+		$address = '';
+		if ($httpStatus == 200) {
+			$t = json_decode($result);
+
+			$address = Ideasa_IdeAddons_Endereco::getInstance();
+			$address->setEndereco($t->tipo_logradouro . ' ' . $t->logradouro);
+			$address->setBairro($t->bairro);
+			$address->setCep($cep);
+			$address->setCidade($t->cidade);
+
+			$region = Mage::getSingleton('directory/region')->loadByCode($t->uf, 'BR');
+			$address->setEstado($region->getId());
 		}
-		$address = json_decode($result);
 
-		$endereco = Ideasa_IdeAddons_Endereco::getInstance();
-		$endereco->setEndereco($address->tipo_logradouro . ' ' . $address->logradouro);
-		$endereco->setBairro($address->bairro);
-		$endereco->setCep($cep);
-		$endereco->setCidade($address->cidade);
-
-		$region = Mage::getSingleton('directory/region')->loadByCode($address->uf, 'BR');
-		$endereco->setEstado($region->getId());
-
-		return $endereco;
+		return $address;
 	}
 
 }
